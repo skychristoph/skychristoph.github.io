@@ -1,0 +1,458 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #FFFFFF;
+  --color-text-main: #000000;
+  --color-primary: #FFFF00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  font-family: HK Grotesk, Sans-Serif;
+  background-color: var(--color-bg);
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: left;
+  margin: 1rem auto 0;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  margin: 1rem auto 0;
+}
+
+/* Very light scaling for our illustration */
+.title {
+  color: #000000;
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 80%;
+  
+}
+
+/* Very light scaling for our illustration */
+.illustration {
+  max-width: 100%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+}
+
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Button - Add it from the README instructions */
+button,
+input {
+  font-family: inherit;
+  font-size: 99%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  padding:;
+  border-radius: 4px;
+  transition: 200ms;
+  -webkit-appearance: none;
+}
+
+button:active {
+  transform: translateX(10px);
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+button:hover {
+  transform: translateX(10px);
+}
+
+.button {
+        background-color: #FFFFFF;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding-left: 3px;
+        padding-right: 3px;
+        padding-top: 1px;
+        padding-bottom: 2px;
+        padding:;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-family: inherit;
+        font-size: 100%;
+        transition: 200ms;
+        cursor: pointer;
+      }
+.button:hover {
+        transform: translateX(10px);
+        font-weight: normal;
+        border: 1px solid black;
+}
+
+/*DROPBTN */
+dropbtn,
+input {
+  font-family: inherit;
+  font-size: 99%;
+  box-sizing: border-box;
+  padding:;
+  border-radius: 4px;
+  transition: 200ms;
+  -webkit-appearance: none;
+}
+
+.dropbtn {
+        background-color: #FFFFFF;
+        border: 2px solid #000000;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding-left: 3px;
+        padding-right: 3px;
+        padding-top: 1px;
+        padding-bottom: 2px;
+        padding:;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-family: inherit;
+        font-size: 100%;
+        transition: 200ms;
+        cursor: pointer;
+      }
+.dropbtn:hover {
+        transform: translateY(-5px);
+        font-weight: normal;
+        border: 1px solid black;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+/* Subheading */
+h2 {
+  color: #000000;
+  background-color: white;
+}
+
+/* Interactive image */
+.illustration:active {
+  transform: translateY(5px);
+}
+
+
+
+
+/* Links that open files in the editor */
+.fileopener {
+  cursor:pointer;
+  font-weight:bold;
+  border-bottom:3px solid var(--color-primary);
+  color: var(--color-secondary);
+}
+.fileopener:hover {
+  border-bottom:3px solid var(--color-secondary);
+}
+
+nav {
+/*   position: absolute; */
+  top: 50px;
+  left: 20px;
+  width: 275px;
+  padding: 20px;
+  min-width: 275px;
+}
+
+article {
+  float: left;
+  width: 70%;
+  min-width: 640px;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+  text-decoration: none;
+        
+}
+/* visited link */
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+/* selected link */
+a:active {
+  color: #800000;
+  text-decoration: none;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+div.gallery {
+  border: 0px;
+  width: inherit;
+}
+
+div.gallery:hover {
+  border: 0px;
+}
+
+div.gallery a {
+  width: 33%;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 0px;
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  max-width: 640px;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.left {
+  background-color: #FFFFFF;
+  padding: 20px;
+  float: left;
+  width: 30%; /* The width is 20%, by default */
+}
+
+.top {
+  background-color: #FFFFFF;
+  padding: 20px;
+  float: left;
+  width: 100%;
+}
+
+.main {
+  background-color: #FFFFFF;
+  padding: 20px;
+  float: left;
+  width: 70%; /* The width is 60%, by default */
+}
+
+.right {
+  background-color: #FFFFFF;
+  padding: 20px;
+  float: left;
+  width: 00%; /* The width is 20%, by default */
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+.embed {
+  float: left;
+  width: 50%;
+  in-line: ;
+}
+
+@media screen and (max-width: 800px) {
+  .video {
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.left2 {
+  background-color: #FFFFFF;
+  padding: 20px;
+  float: left;
+  width: 50%; /* The width is 20%, by default */
+}
+
+.main2 {
+  background-color: #FFFFFF;
+  padding: 20px;
+  float: left;
+  width: 50%; /* The width is 60%, by default */
+}
+
+@media screen and (max-width: 800px) {
+  .left2, .main2 {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  transform: translateX(10px);
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+.openbtn:hover {
+  background-color: #444444;
+  transform: translateX(10px);
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/* @media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+*/
