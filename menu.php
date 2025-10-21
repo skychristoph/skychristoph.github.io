@@ -58,4 +58,6 @@
   
 
             <p><a href="https://vimeo.com/skychristoph2" target="_blank">Vimeo</a></p>
+
+            <p><a style="" href="/cv.html">CV</a></p>
           </nav>
