@@ -1,4 +1,4 @@
-_this is just for git demonstration_
+_this is just for git demonstration._
 
 # Hello website!
 
