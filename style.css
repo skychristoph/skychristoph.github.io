@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Hanken+Grotesk');
+@import url('https://fonts.googleapis.com/css?family=Hanken+Grotesk:bold');
 /******************************************************************************
 START Glitch hello-app default styles
 
@@ -22,8 +24,8 @@ to this section's matching END comment to see page-specific styles.
   --wrapper-height: 87vh;
   --image-max-width: 300px;
   --image-margin: 3rem;
-  --font-family: "HK Grotesk";
-  --font-family-header: "HK Grotesk";
+  --font-family: "Hanken Grotesk", "Instrument Sans", "Arial", sans-serif;
+  --font-family-header: "Hanken Grotesk", "Instrument Sans", "Arial", sans-serif;
 }
 
 /* Basic page style resets */
@@ -35,17 +37,15 @@ to this section's matching END comment to see page-specific styles.
 }
 
 /* Import fonts */
-@font-face {
-  font-family: HK Grotesk;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
-    format("opentype");
+/* @font-face {
+  font-family: Hanken Grotesk;
+  src: url("https://cdn.jsdelivr.net/gh/drinking-code/HK-Grotesk-Web/font.min.css")
 }
 @font-face {
-  font-family: HK Grotesk;
+  font-family: Hanken Grotesk;
   font-weight: bold;
-  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
-    format("opentype");
-}
+  src: url("https://cdn.jsdelivr.net/gh/drinking-code/HK-Grotesk-Web/font.min.css")
+} */
 
 
 
@@ -57,7 +57,7 @@ END Glitch hello-app default styles
 ******************************************************************************/
 
 body {
-  font-family: HK Grotesk, Sans-Serif;
+  font-family: Hanken Grotesk, Sans-Serif;
   background-color: var(--color-bg);
 }
 
@@ -79,7 +79,7 @@ body {
 /* Very light scaling for our illustration */
 .title {
   color: #000000;
-  font-family: HK Grotesk;
+  font-family: Hanken Grotesk, Instrument Sans, Sans-serif ;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
