@@ -23,7 +23,6 @@ if (dropbtn)
   dropbtn.onclick = function () {
     dropbtn.classList.toggle("")
   }
-// ----- GLITCH STARTER PROJECT HELPER CODE -----
 
 // Open file when the link in the preview is clicked
 let goto = (file, line) => {

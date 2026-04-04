@@ -29,6 +29,20 @@ body {
   background-color: var(--color-bg);
 }
 
+figure {
+  border: 0px #cccccc solid;
+  padding: 0px;
+  margin: auto;
+}
+
+figcaption {
+  font-size: small;
+  color: black;
+  font-style: regular;
+  padding: 0px;
+  text-align: left;
+}
+
 /* Page structure */
 .wrapper {
   min-height: var(--wrapper-height);
@@ -80,7 +94,6 @@ input {
   box-sizing: border-box;
   border-radius: 4px;
   transition: 200ms;
-  -webkit-appearance: none;
 }
 
 button:active {
@@ -124,7 +137,6 @@ input {
   box-sizing: border-box;
   border-radius: 4px;
   transition: 200ms;
-  -webkit-appearance: none;
 }
 
 .dropbtn {
