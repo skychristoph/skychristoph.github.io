@@ -11,38 +11,11 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-* {
-  box-sizing: border-box;
-}
-
-.left {
-  background-color: #FFFFFF;
-  padding: 20px;
-  float: left;
-  width: 30%; /* The width is 20%, by default */
-}
-
-.main {
-  background-color: #FFFFFF;
-  padding: 20px;
-  float: left;
-  width: 70%; 
-  max-width: 900px;/* The width is 60%, by default */
-}
-
-.right {
-  background-color: #FFFFFF;
-  padding: 20px;
-  float: left;
-  width: 00%; /* The width is 20%, by default */
-}
-
-
-/* Use a media query to add a break point at 800px: */
-@media screen and (max-width: 800px) {
-  .left, .main, .right {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-  }
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
 }
 </style>
 </head>
@@ -75,22 +48,50 @@
 
  <div>
     <img src="/static/rmpalbum.jpg" alt="rmp album cover" width="100%" height="50%"> 
-    <iframe style="padding-top: 20px; border: 0; width: 100%; height: 140px;" src="https://bandcamp.com/EmbeddedPlayer/album=1746362087/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://racingmountpleasant.bandcamp.com/album/racing-mount-pleasant-2">Racing Mount Pleasant by Racing Mount Pleasant</a></iframe>
+    <iframe style="border: 0; width: 100%; max-width: 800px; height: 200px;" src="https://bandcamp.com/EmbeddedPlayer/album=2193350584/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/" seamless><a href="https://racingmountpleasant.bandcamp.com/album/grip-your-fist-im-heaven-bound-2">Grip Your Fist, I&#39;m Heaven Bound by Racing Mount Pleasant</a></iframe>
   </div>
 <br>
   <p>
     Single covers: Call It Easy, Racing Mount Pleasant, Your New Place
   </p>
-  <div  style="width: 100%; padding: 0px;">
- 
-  <img src="/static/calliteasy.jpg" alt="Call It Easy" style="width: 32%; padding: 0px;">
-  <img src="/static/rmpsingle.jpg" alt="Racing Mount Pleasant" style="width: 32%; padding-left: 00px; padding-top: 0px;"> 
-  <img src="/static/yournewplace.jpg" alt="Your New Place" style="width: 32%; padding: 0px;"> 
 
- </div>
-  
+  <div class="container">
+    <img src="/static/calliteasy.jpg" alt="Call It Easy" style="width: 33%;">
+  <img src="/static/rmpsingle.jpg" alt="Racing Mount Pleasant" style="width: 33%"> 
+  <img src="/static/yournewplace.jpg" alt="Your New Place" style="width: 33%"> 
+  </div>
+<br>
+  <div class="container">
+    <img id="icinh_5" src="/static/icinh_5.png" alt="" style="width: 33%;">
+    <img id="icinh_6" src="/static/icinh_6.png" alt="" style="width: 33%"> 
+    <img id="icinh_7" src="/static/icinh_7.png" alt="" style="width: 33%"> 
+  </div>
+
 </div>
     
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
 
 </body>
 </html>

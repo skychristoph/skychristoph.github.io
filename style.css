@@ -314,7 +314,8 @@ div.desc {
   background-color: #FFFFFF;
   padding: 20px;
   float: left;
-  width: 70%; /* The width is 60%, by default */
+  width: 70%;
+  max-width: 800px;
 }
 
 .right {
